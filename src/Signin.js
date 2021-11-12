@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import "./Signin.css";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {auth} from './firebase';
 
 function Signin() {
+    const history = useHistory();
     const [email, setsEmail] = useState('');
     const [password, setsPassword] = useState('');
     const logIn = e => {
@@ -19,6 +20,11 @@ function Signin() {
         .then((auth) => {
             //successfully created a new user with email and password
             console.log(auth);
+
+            if(auth){
+                //forcing to redirect
+                history.push('/');
+            }
 
         })
         .catch(error => alert(error.message));
