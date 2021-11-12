@@ -1,20 +1,14 @@
 import React from 'react';
 import "./Subtotal.css";
 import CurrencyFormat from 'react-currency-format';
+import {getCartTotal} from './reducer';
 import {useStateValue} from './StateProvider';
 
 
 function Subtotal() {
-
-    var total = 0;
+    
     const [{cart}, dispatch] = useStateValue();
-
-    for (var i = 0; i < cart.length; i++) {
-        total += cart[i].price;
-    }
-    
-
-    
+    console.log(getCartTotal(cart));
 
     return (
         <div className="subtotal">
@@ -31,7 +25,7 @@ function Subtotal() {
                 )}
 
                 decimalScale={2}
-                value={total} //homework
+                value={getCartTotal(cart)} 
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}

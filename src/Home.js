@@ -43,21 +43,21 @@ function Home() {
 
             <div className="home__row">
             <Product
-                    id="567432" 
+                    id="56743" 
                     title="Hbada Gaming Chair Ergonomic Racing Chair " 
                     price={169.99} 
                     image="https://m.media-amazon.com/images/I/71IC-JS4p1L._AC_SL1500_.jpg" 
                     rating={4}
                 />
                 <Product
-                    id="234255" 
+                    id="23425" 
                     title="Redragon S101 Wired Gaming Keyboard and Mouse Combo RGB Backlit Gaming Keyboard" 
                     price={31.95} 
                     image="https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_SL1500_.jpg" 
                     rating={3}
                 />
                 <Product
-                    id="556884" 
+                    id="55684" 
                     title="Vornado EVDC500 Energy Smart Evaporative Humidifier with Automatic Shut-off" 
                     price={128.92} 
                     image="https://m.media-amazon.com/images/I/81or1vvkQPL._AC_SL1500_.jpg" 
@@ -67,7 +67,7 @@ function Home() {
 
             <div className="home__row">
                 <Product
-                    id="559984" 
+                    id="55994" 
                     title="Introducing Amazon Fire TV 50"
                     price={329.99} 
                     image="https://m.media-amazon.com/images/I/51EPd38RHQL._AC_SL1000_.jpg" 
@@ -78,7 +78,7 @@ function Home() {
             
             <div className="home__row">
                 <Product
-                    id="449984" 
+                    id="49984" 
                     title="Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens"
                     price={419.99} 
                     image="https://m.media-amazon.com/images/I/71EWRyqzw0L._AC_SL1500_.jpg" 
