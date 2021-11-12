@@ -8,7 +8,6 @@ import {useStateValue} from './StateProvider';
 function Subtotal() {
     
     const [{cart}, dispatch] = useStateValue();
-    console.log(getCartTotal(cart));
 
     return (
         <div className="subtotal">
