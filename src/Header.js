@@ -2,15 +2,17 @@ import "./Header.css";
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import { Link } from "react-router-dom";
 // rfce - component shortcut
 
 function Header() {
     return (
-        <div className='header'>        
-            <div className='header_logo'>
-                <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
-            </div>
+        <div className='header'>
+            <Link to='/'>        
+                <div className='header_logo'>
+                    <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+                </div>
+            </Link>
 
             <div className='header_search'>
                 <input className="header__searchbar" type="text" />
@@ -32,11 +34,13 @@ function Header() {
                     <span className='header__optionLineOne'>Your</span>
                     <span className='header__optionLineTwo'>Prime</span>
                  </div>
-
-                 <div className="header__optionCart">
-                    <ShoppingCartIcon className="header__optionCartIcon" />
-                    <span className="header__optionLineTwo header__cartCount">0</span>
-                 </div>
+                
+                <Link to='/checkout'>
+                    <div className="header__optionCart">
+                        <ShoppingCartIcon className="header__optionCartIcon" />
+                        <span className="header__optionLineTwo header__cartCount">0</span>
+                    </div>
+                 </Link>
             </div>
             
             
