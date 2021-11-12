@@ -3,9 +3,14 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom";
+import {useStateValue} from "./StateProvider";
+
+
 // rfce - component shortcut
 
 function Header() {
+    const [{cart}, dispatch] = useStateValue();
+
     return (
         <div className='header'>
             <Link to='/'>        
@@ -38,7 +43,7 @@ function Header() {
                 <Link to='/checkout'>
                     <div className="header__optionCart">
                         <ShoppingCartIcon className="header__optionCartIcon" />
-                        <span className="header__optionLineTwo header__cartCount">0</span>
+                        <span className="header__optionLineTwo header__cartCount">{cart?.length}</span>
                     </div>
                  </Link>
             </div>

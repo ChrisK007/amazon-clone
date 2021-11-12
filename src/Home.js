@@ -9,7 +9,7 @@ function Home() {
                 <img className="home__img" src="https://m.media-amazon.com/images/I/61nfpX0p23L._SX3000_.jpg" alt=""/>
             </div>     
 
-            <div class="home__row">
+            <div className="home__row">
                 <Product 
                     id="12345" 
                     title="All-new Echo Dot (4th generation) International Version"
@@ -41,7 +41,7 @@ function Home() {
 
             </div>
 
-            <div class="home__row">
+            <div className="home__row">
             <Product
                     id="567432" 
                     title="Hbada Gaming Chair Ergonomic Racing Chair " 
@@ -65,7 +65,7 @@ function Home() {
                 />
             </div>
 
-            <div class="home__row">
+            <div className="home__row">
                 <Product
                     id="559984" 
                     title="Introducing Amazon Fire TV 50"
@@ -76,7 +76,7 @@ function Home() {
 
             </div>
             
-            <div class="home__row">
+            <div className="home__row">
                 <Product
                     id="449984" 
                     title="Canon EOS Rebel T7 DSLR Camera with 18-55mm Lens"
