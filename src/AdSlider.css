@@ -1,6 +1,21 @@
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  background: green;
+}
+.slide__container {
 
-
-
+  width: 1500px;
+  align-items: center;
+}
+.slide__images {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0)
+  );
+  width: 100%;
+  vertical-align: top;
+}
 /*.adSlider {
   border: 1px solid red;
   position: relative;

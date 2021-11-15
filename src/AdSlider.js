@@ -1,14 +1,42 @@
 import React, {useRef, useEffect} from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import "./AdSlider.css"
+
+import image1 from "./assets/sliderImages1.jpg";
+import image2 from "./assets/sliderImages2.jpg";
+import image3 from "./assets/sliderImages3.jpg";
+import image4 from "./assets/sliderImages4.jpg";
+import image5 from "./assets/sliderImages5.jpg";
+import image6 from "./assets/sliderImages6.jpg";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import styled from 'styled-components';
 
 
+export const data = [image1, image2, image3, image4, image5, image6];
+
+const AdSlider = () => {
+    return (
+        <div className="slide__wrapper">
+        <div className="slide__container" style={{margin: "auto"}}>
+            <Slider autoplay autoplaySpeed={2000} dots initialSlide={2} infinite>
+                {
+                    data.map((item) => (
+                        <div>
+                            <img className="slide__images" src={item} />
+                        </div>   
+                    ))
+                }
+            </Slider>
+        </div>
+        </div>
+    )
+}
 
 
-
-
+/*
 
 const AdSlider = () => {
 
@@ -168,46 +196,5 @@ const SlideButton = styled.div `
     ${props => props.direction ? 'left: 1450px' : 'left:0'}
 
 `;
-/*
-// dots: true, infinite: true, speed: 500 slidesToShow: 1, slidesToScroll: 1
-function AdSlider() {
-    const [x, setX] = useState(0);
-
-    let sliderArr = [1, 2, 3, 4, 5];
-
-    const goLeft = () => {
-        console.log(x);
-        setX(x+100);
-    }
-
-    const goRight = () => {
-        console.log(x);
-        (x === 100 * sliderArr.length - 1) ? setX(0) : setX(x- 100);
-    }
-
-    return (
-        <div>
-            <div className="adSlider">
-                {
-                sliderArr.map((item, index) =>{
-                    return(
-                        <div key={index} className="slide" style={{transform:`translateX(${x}%)`}}>
-                            {item}
-                        </div>
-                  )
-                })
-                }
-                <button className="slide-bttn" id="goLeft" onClick={goLeft}>Left</button>
-                <button className="slide-bttn" id="goRight" onClick={goRight}>Right</button>
-            </div>
-        
-        </div>
-        
-    )
-
-}
-
 */
-
-
 export default AdSlider;
