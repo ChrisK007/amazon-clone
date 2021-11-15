@@ -12,7 +12,7 @@ import image5 from "./assets/sliderImages5.jpg";
 import image6 from "./assets/sliderImages6.jpg";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
 
 export const data = [image1, image2, image3, image4, image5, image6];
