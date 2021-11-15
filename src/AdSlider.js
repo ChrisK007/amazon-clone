@@ -21,7 +21,7 @@ const AdSlider = () => {
     return (
         <div className="slide__wrapper">
         <div className="slide__container" style={{margin: "auto"}}>
-            <Slider autoplay autoplaySpeed={2000} dots initialSlide={2} infinite>
+            <Slider autoplay autoplaySpeed={2000} dots initialSlide={0} infinite>
                 {
                     data.map((item) => (
                         <div>

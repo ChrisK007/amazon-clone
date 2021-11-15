@@ -10,28 +10,7 @@ const slideImages = [
 
 //  <img className="home__img" src="https://m.media-amazon.com/images/I/61nfpX0p23L._SX3000_.jpg" alt=""/>
 function Home() {
-/*
-    var num = 0;
-    const next = () => {
-        const slider = document.getElementById('slider');
-        num++;
 
-        if(num >=slideImages.length)
-            num = 0;
-        slider.src=slideImages[num];
-
-    };
-
-    const previous = () => {
-        const slider = document.getElementById('slider');
-        num--;
-
-        if(num < 0)
-            num = slideImages.length - 1;
-        slider.src=slideImages[num];
-
-    };
-    */
 
     return (
         <div className="home">
