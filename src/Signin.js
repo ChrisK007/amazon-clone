@@ -11,6 +11,11 @@ function Signin() {
         //prevent the page from refreshing
         e.preventDefault();
 
+        auth.signInWithEmailAndPassword(email, password)
+        .then(auth => {
+            history.push('/');
+        })
+        .catch(error =>alert(error.message));
         //firebase login
     }
     const register = e => {
