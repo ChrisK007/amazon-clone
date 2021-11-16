@@ -10,7 +10,7 @@
   border-bottom: 1px solid lightgray;
 }
 .payment__container > h1 a {
-  /* underscore disapper */
+  /* underscore disappear */
   text-decoration: none;
 }
 
@@ -29,12 +29,11 @@
 .payment__address {
   padding-left: 30px;
 }
-.payment_address,
-.payment__items {
+.payment__address,
+.payment__items.payment,
+.payment__details {
   flex: 0.8;
 }
 
-.payment__items {
-}
 .payment__details {
 }

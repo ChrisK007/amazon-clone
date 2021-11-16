@@ -12,6 +12,12 @@ export const getCartTotal = (cart) =>
 const reducer = (state, action) => {
     console.log(action);
     switch(action.type) {
+        case 'EMPTY_CART':
+            return{
+                ...state,
+                cart: []
+            };
+
         case 'ADD_TO_CART':
             return {
                 ...state,
