@@ -1,9 +1,37 @@
 .slick-arrow.slick-prev,
 .slick-arrow.slick-next {
-  background: green;
+  background-color: none;
+  width: 75px;
+  height: 265px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 135px;
+}
+
+.slick-arrow.slick-prev:active,
+.slick-arrow.slick-next:active {
+  border: 2px solid rgba(23, 133, 127, 0.671);
+  border-radius: 2px;
+}
+
+.slick-prev {
+  left: 0;
+  filter: drop-shadow(2px 0px #fff);
+}
+
+.slick-next {
+  right: 0;
+  filter: drop-shadow(-2px 0px #fff);
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
 }
 .slide__container {
-
   width: 1500px;
   align-items: center;
 }
@@ -16,6 +44,7 @@
   width: 100%;
   vertical-align: top;
 }
+
 /*.adSlider {
   border: 1px solid red;
   position: relative;

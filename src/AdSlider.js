@@ -17,11 +17,31 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export const data = [image1, image2, image3, image4, image5, image6];
 
+const PrevBttn = (props) => {
+    console.log(props);
+    const {className, onClick} = props;
+    return (
+        <div className={className} onClick={onClick}>
+            <ArrowBackIosNewIcon style={{color: 'black', fontSize : "35px"}}/>
+        </div>
+    )
+}
+
+const NxtBttn = (props) => {
+    console.log(props);
+    const {className, onClick} = props;
+    return(
+        <div className={className} onClick={onClick}>
+            <ArrowForwardIosIcon style={{color: 'black',fontSize : "35px"}}/>
+        </div>
+    )
+}
+
 const AdSlider = () => {
     return (
         <div className="slide__wrapper">
         <div className="slide__container" style={{margin: "auto"}}>
-            <Slider autoplay autoplaySpeed={2000} dots initialSlide={0} infinite>
+            <Slider autoplay autoplaySpeed={2000} dots initialSlide={0} prevArrow={<PrevBttn/>} nextArrow={<NxtBttn/>} infinite>
                 {
                     data.map((item) => (
                         <div>

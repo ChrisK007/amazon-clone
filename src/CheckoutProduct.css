@@ -18,6 +18,10 @@
   border-radius: 25px;
   color: #111;
 }
+
+.checkoutProduct__info > button:hover {
+  cursor: pointer;
+}
 .checkoutProduct__image {
   margin-top: 10px;
   margin-bottom: 10px;
