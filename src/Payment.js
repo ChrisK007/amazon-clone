@@ -3,11 +3,12 @@ import './Payment.css';
 import { Link, useHistory} from 'react-router-dom';
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
+import Order from "./Order";
 import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from "./reducer";
 import axios from "./axios";
 import {CardElement, useStripe, useElements} from "@stripe/react-stripe-js";
-import {db, doc, collection, setDoc} from './firebase';
+import {db, doc, setDoc} from './firebase';
 
 function Payment() {
     const [{cart, user}, dispatch] = useStateValue();
@@ -51,34 +52,15 @@ function Payment() {
                 card: elements.getElement(CardElement)
             }
         }).then(async ({paymentIntent}) => {
-            // paymentIntent = payment confirmation
-            // console.log(1111, "user", user)
-            // console.log(1111, "payment", paymentIntent)
+
             const paymentRef = doc(db, "users", user.uid, "orders", paymentIntent.id)
-            // console.log(1111, "ref", ref)
+
 
             await setDoc(paymentRef, {
                 cart: cart,
                 amount: paymentIntent.amount,
                 created: paymentIntent.created
               });
-            // .set({
-            //     cart: cart,
-            //     amount: paymentIntent.amount,
-            //     created: paymentIntent.created
-            // })
-            
-            /*
-            collection(db, "users")
-                .doc(db, user?.id)
-                .collection(db, "orders")
-                .doc(db, paymentIntent.id)
-                .set({
-                    cart: cart,
-                    amount: paymentIntent.amount,
-                    created: paymentIntent.created
-                })
-*/
 
             setSuceeded(true);
             setError(null);

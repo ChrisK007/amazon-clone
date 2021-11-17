@@ -2,7 +2,7 @@ import {initializeApp} from 'firebase/app';
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-import { doc, collection, setDoc } from "firebase/firestore";
+import { doc, query, orderBy, onSnapshot, collection, setDoc } from "firebase/firestore";
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -22,5 +22,5 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
-export {db, doc, collection, auth, setDoc};
+export {db, doc, auth, query, orderBy, onSnapshot, collection, setDoc};
 

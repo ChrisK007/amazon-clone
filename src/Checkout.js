@@ -32,7 +32,7 @@ function Checkout() {
                         />
                         
                     ))}
-               
+                  
                 </div>
             </div>
 
