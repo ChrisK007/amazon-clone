@@ -21,10 +21,10 @@ function Subtotal() {
                         </p>
                         <small className="subtotal__gift">
                             <input type="checkbox" />This order contains a gift
-                        </small>
+                  ß      </small>
                     </>
                 )}
-
+                
                 decimalScale={2}
                 value={getCartTotal(cart)} 
                 displayType={"text"}
